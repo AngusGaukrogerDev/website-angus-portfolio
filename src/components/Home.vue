@@ -1,18 +1,18 @@
 <template>
     <div class=" w-screen  h-screen page__grid  ">
         <SubGrid1 />
-        <div class=" ">ayy</div>
-        <div class=" ">ayy</div>
-        <div class=" ">ayy</div>
-        <div class=" ">ayy</div>
-        <div class=" ">ayy</div>
-        <div class=" ">ayy</div>
+        <div class="center__children ">ayy</div>
+        <div class="center__children ">ayy</div>
+        <div class=" center__children">ayy</div>
+        <Subgrid2 />
+        <div class=" center__children">ayy</div>
     </div>
        
 </template>
 
 <script setup>
     import SubGrid1 from './NavGrid/Subgrid1.vue'
+    import Subgrid2 from './NavGrid/Subgrid2.vue'
     
 </script>
 <style lang="scss" scoped >
