@@ -1,19 +1,40 @@
 <template>
-    <div >
-        <h1 class="aos-item font-extrabold text-3xl" data-aos="fade-left">Everything Installed Successfully
-         - GLHF</h1>
-        <p class="my-5">Stack: Vue3+Vite, Tailwind CSS, Vue Router, VueX, VueUse, Headless UI, AOS, ESLint, Prettier</p>
-        <p class="">Name in store: {{name}} ... This value is determined by VueX</p>
+    <div class=" w-screen  h-screen page__grid  ">
+        <SubGrid1 />
+        <div class=" ">ayy</div>
+        <div class=" ">ayy</div>
+        <div class=" ">ayy</div>
+        <div class=" ">ayy</div>
+        <div class=" ">ayy</div>
+        <div class=" ">ayy</div>
     </div>
+       
 </template>
 
 <script setup>
-    import {computed} from 'vue';
-    import {useStore} from 'vuex';
-
-    const store = useStore();
-
-    const name = computed(() =>  {
-        return store.state.user.name;
-    })
+    import SubGrid1 from './NavGrid/Subgrid1.vue'
+    
 </script>
+<style lang="scss" scoped >
+.page__grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto; 
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+</style>
+<style>
+.center__children{
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 5% 5% 5%;
+    
+}
+</style>
