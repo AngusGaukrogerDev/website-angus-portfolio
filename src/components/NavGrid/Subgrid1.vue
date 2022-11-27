@@ -1,11 +1,15 @@
 <template>
     <div class=" page__subgrid floating">
-            <div class="center__children child1__subgrid2 border-4">
+            <div class="center__children child1__subgrid2 border-4 hover__transition">
                 <ion-icon size="large" name="information-circle"></ion-icon>
             </div>
-            <div class="center__children border-4">3</div>
-            <div class="center__children child1__subgrid3 border-4">4</div>
-            <div class="center__children border-4">
+            <div class="center__children border-4 hover__transition">
+                <ion-icon size="large" name="musical-notes"></ion-icon>
+            </div>
+            <div class="center__children child1__subgrid3 border-4 hover__transition">
+                <ion-icon size="large" name="flag"></ion-icon>
+            </div>
+            <div class="center__children border-4 hover__transition">
                 <ion-icon size="large" name="earth"></ion-icon>
             </div>
     </div>

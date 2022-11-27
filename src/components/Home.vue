@@ -56,6 +56,25 @@
 
 </style>
 <style>
+.hover__transition {
+    font: 22px Arial;
+    display: inline-block;
+    padding: 1em 2em;
+    text-align: center;
+    color: black;
+    background: white; /* default color */
+
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, white 50%, black 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+.hover__transition:hover {
+    background-position: left;
+    cursor: pointer;
+    color: white;
+}
+
 .flip-card {
   background-color: transparent;
   width: 100vw;

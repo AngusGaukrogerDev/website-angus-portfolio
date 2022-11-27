@@ -1,14 +1,19 @@
 <template>
-    <div class="page__subgrid2 floating ">
-        <div class="center__children child1__subgrid2 border-4 ">
+    <div class="page__subgrid2 floating  ">
+        <div class="center__children child1__subgrid2 border-4 hover__transition">
             <ion-icon size="large" name="document-text"></ion-icon>
         </div>
-        <div class="center__children border-4 ">
+        <div class="center__children border-4 hover__transition">
             <ion-icon size="large" name="image"></ion-icon>
         </div>
-        <div class="center__children border-4 ">1</div>
-        <div class="center__children  border-4 ">1</div>
-        <div class="center__children border-4 ">1</div>
+        <div class="center__children border-4 hover__transition">
+            <ion-icon size="large" name="cube"></ion-icon>
+        </div>
+        <div class="center__children  border-4 hover__transition">
+            <ion-icon size="large" name="contrast"></ion-icon></div>
+        <div class="center__children border-4 hover__transition">
+            <ion-icon size="large" name="business"></ion-icon>
+        </div>
     </div>
 </template>
 
