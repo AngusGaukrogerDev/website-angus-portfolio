@@ -1,18 +1,33 @@
 <template>
-    <div class="">
-        <div  class="w-screen  h-screen  page__grid ">
-            <div class="">
-                <!-- Placeholder -->
+    <div id="FlipCard" class="flip-card">
+        <div id="CardInner" class="flip-card-inner" >
+            <div id="CardFront" class="flip-card-front w-screen  h-screen  page__grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="border-4 flex row justify-center items-center">
+                    <div>
+                        <h1>Angus Gaukroger</h1>
+                        <h2>Full Stack Software Developer</h2>
+                    </div>  
+                </div>
+                
             </div>
-            <SubGrid1 />   
-            <Subgrid2 />
-            <Subgrid4 />
-            <Subgrid3 />
-            <div class="">
-                <!-- Placeholder -->
-            </div>
+            <div id="CardBack" class="flip-card-back w-screen  h-screen  page__grid ">
+                <div class="">
+                    <!-- Placeholder -->
+                </div>
+                <SubGrid1 />   
+                <Subgrid2 />
+                <Subgrid4 />
+                <Subgrid3 />
+                <div class="">
+                    <!-- Placeholder -->
+                </div>
 
-            
+                
+            </div>
         </div>
     </div>
        
@@ -41,6 +56,47 @@
 
 </style>
 <style>
+.flip-card {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  /* color: white; */
+  transform: rotateY(180deg);
+}
+
 .center__children{
     display: flex;
     direction: row;
