@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <div class="w-screen  h-screen  page__grid ">
+        <div  class="w-screen  h-screen  page__grid ">
             <div class="">
                 <!-- Placeholder -->
             </div>
@@ -50,5 +50,8 @@
     
 }
 
-
+.floating__borders{
+    border-color: 8px solid black;
+    border-radius: 25px;
+}
 </style>
