@@ -11,9 +11,9 @@
         </div>
         <div class="center__children  border-4 hover__transition">
             <ion-icon size="large" name="contrast"></ion-icon></div>
-        <div class="center__children border-4 hover__transition" @mouseover="business=true" @mouseleave="business=false">
+        <div class="center__children border-4 hover__transition tooltip tooltip-bottom" data-tip="My Business - Connect Dorset" >
             <ion-icon v-show="business==false" size="large" name="business"></ion-icon>
-            <span class="hover__font" v-show="business">My Business</span>
+            <!-- <span class="hover__font" v-show="business">My Business</span> -->
         </div>
     </div>
 </template>

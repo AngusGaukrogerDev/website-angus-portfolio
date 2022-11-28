@@ -1,14 +1,14 @@
 <template>
     <div class="page__subgrid4 floating">
         <div class="center__children"></div>
-        <a href="https://github.com/AngusGaukrogerDev"  class="center__children border-4 hover__transition">       
+        <a href="https://github.com/AngusGaukrogerDev"  class="center__children border-4 hover__transition tooltip tooltip-top" data-tip="GitHub">       
             <ion-icon name="logo-github" size="large" ></ion-icon>
         </a>
-        <a href="https://twitter.com/angus_gaukroger" class="center__children border-4 hover__transition">            
+        <a href="https://twitter.com/angus_gaukroger" class="center__children border-4 hover__transition tooltip tooltip-top" data-tip="Twitter">            
             <ion-icon name="logo-twitter" size="large"></ion-icon>
         </a>
         <div class="center__children "></div>
-        <a href="https://www.linkedin.com/in/angusgaukroger/" class="center__children border-4 hover__transition">            
+        <a href="https://www.linkedin.com/in/angusgaukroger/" class="center__children border-4 hover__transition tooltip tooltip-bottom" data-tip="LinkedIn">            
             <ion-icon name="logo-linkedin" size="large"></ion-icon>
         </a>
         <div class="center__children border-4 hover__transition">            
