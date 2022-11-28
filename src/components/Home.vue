@@ -5,13 +5,28 @@
                 <div></div>
                 <div></div>
                 <div></div>
-                <div></div>
-                <div class="border-4 flex row justify-center items-center">
-                    <div>
+                <div></div>  
+                <TransitionRoot
+                appear
+                :show="isShowing"
+                as="template"
+                enter="transform transition duration-[400ms]"
+                enter-from="opacity-0 rotate-[-120deg] scale-50"
+                enter-to="opacity-100 rotate-0 scale-100"
+                leave="transform duration-200 transition ease-in-out"
+                leave-from="opacity-100 rotate-0 scale-100 "
+                leave-to="opacity-0 scale-95 "
+                >
+                    <div class="border-4 flex row justify-center items-center">
+                        <div>
                         <h1>Angus Gaukroger</h1>
                         <h2>Full Stack Software Developer</h2>
-                    </div>  
-                </div>
+                        </div> 
+                    </div>
+                </TransitionRoot>
+                        
+                     
+                
                 
             </div>
             <div id="CardBack" class="flip-card-back w-screen  h-screen  page__grid ">
@@ -38,7 +53,15 @@
     import Subgrid2 from './NavGrid/Subgrid2.vue'
     import Subgrid3 from './NavGrid/Subgrid3.vue'
     import Subgrid4 from './NavGrid/Subgrid4.vue'
+    import { TransitionRoot } from '@headlessui/vue'
+    import { onMounted, ref } from 'vue'
+
     
+    const isShowing = ref(true)
+    // onMounted(() => { 
+        
+    //     isShowing.value = true;
+    // })
 </script>
 <style lang="scss" scoped >
 .page__grid{
@@ -122,11 +145,12 @@
     justify-content: center;
     align-items: center;
     padding: 5% 5% 5% 5%;
+    border-color: #f3f4f6;
     
 }
 
 .floating__borders{
-    border-color: 8px solid black;
+    border-color: 8px solid #4b5563;
     border-radius: 25px;
 }
 </style>

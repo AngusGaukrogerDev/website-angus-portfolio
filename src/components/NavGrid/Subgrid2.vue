@@ -11,17 +11,24 @@
         </div>
         <div class="center__children  border-4 hover__transition">
             <ion-icon size="large" name="contrast"></ion-icon></div>
-        <div class="center__children border-4 hover__transition">
-            <ion-icon size="large" name="business"></ion-icon>
+        <div class="center__children border-4 hover__transition" @mouseover="business=true" @mouseleave="business=false">
+            <ion-icon v-show="business==false" size="large" name="business"></ion-icon>
+            <span class="hover__font" v-show="business">My Business</span>
         </div>
     </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 
+let business = ref(false);
 </script>
 
 <style lang="scss" scoped>
+
+.hover__font{
+    font-size: small;
+}
 .page__subgrid2{
     grid-row: 1 / span 2;
     grid-column: 3 / span 1;
@@ -29,10 +36,12 @@
     grid-template-columns: auto auto;
     grid-template-rows: auto auto ; 
     display: grid;
+    min-width:0
 }
 .child1__subgrid2{
     grid-row: 1 / span 2;
     grid-column: 1 / span 1;
+    min-width:0
 }
 .floating { 
     animation-name: floating;
