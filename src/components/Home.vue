@@ -55,7 +55,7 @@
     import Subgrid4 from './NavGrid/Subgrid4.vue'
     import { TransitionRoot } from '@headlessui/vue'
     import { onMounted, ref } from 'vue'
-
+    import {useRouter} from 'vue-router';
     
     const isShowing = ref(true)
     // onMounted(() => { 

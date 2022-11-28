@@ -1,16 +1,16 @@
 <template>
     <div class="page__subgrid4 floating">
         <div class="center__children"></div>
-        <div class="center__children border-4 hover__transition">
-            <ion-icon name="logo-github" size="large"></ion-icon>
-        </div>
-        <div class="center__children border-4 hover__transition">            
+        <a href="https://github.com/AngusGaukrogerDev"  class="center__children border-4 hover__transition">       
+            <ion-icon name="logo-github" size="large" ></ion-icon>
+        </a>
+        <a href="https://twitter.com/angus_gaukroger" class="center__children border-4 hover__transition">            
             <ion-icon name="logo-twitter" size="large"></ion-icon>
-        </div>
+        </a>
         <div class="center__children "></div>
-        <div class="center__children border-4 hover__transition">            
+        <a href="https://www.linkedin.com/in/angusgaukroger/" class="center__children border-4 hover__transition">            
             <ion-icon name="logo-linkedin" size="large"></ion-icon>
-        </div>
+        </a>
         <div class="center__children border-4 hover__transition">            
             <ion-icon name="mail" size="large"></ion-icon>
         </div>
@@ -18,6 +18,8 @@
 </template>
 
 <script setup>
+import {useRouter} from 'vue-router';
+const router = useRouter();
 
 </script>
 
