@@ -1,17 +1,17 @@
 <template>
     <div class="page__subgrid2 floating  ">
-        <div class="center__children child1__subgrid2 border-4 hover__transition">
+        <div class="center__children child1__subgrid2 border-4 hover__transition tooltip tooltip-top tooltip-primary" data-tip="CV">
             <ion-icon size="large" name="document-text"></ion-icon>
         </div>
-        <div class="center__children border-4 hover__transition">
-            <ion-icon size="large" name="image"></ion-icon>
+        <div class="center__children border-4 hover__transition tooltip tooltip-top tooltip-primary" data-tip="Projects">
+            <ion-icon size="large" name="build"></ion-icon>
         </div>
-        <div class="center__children border-4 hover__transition">
+        <div class="center__children border-4 hover__transition tooltip tooltip-right tooltip-primary" data-tip="My Stack">
             <ion-icon size="large" name="cube"></ion-icon>
         </div>
-        <div class="center__children  border-4 hover__transition">
+        <div class="center__children  border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="Toggle Light/Dark Mode">
             <ion-icon size="large" name="contrast"></ion-icon></div>
-        <div class="center__children border-4 hover__transition tooltip tooltip-bottom" data-tip="My Business - Connect Dorset" >
+        <div class="center__children border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="My Business - Connect Dorset" >
             <ion-icon v-show="business==false" size="large" name="business"></ion-icon>
             <!-- <span class="hover__font" v-show="business">My Business</span> -->
         </div>
