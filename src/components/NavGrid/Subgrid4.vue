@@ -1,14 +1,14 @@
 <template>
     <div class="page__subgrid4 floating">
         <div class="center__children"></div>
-        <a @click="exitSequence" href="https://github.com/AngusGaukrogerDev"  class="center__children border-4 hover__transition tooltip tooltip-top tooltip-primary" data-tip="GitHub">       
+        <a href="https://github.com/AngusGaukrogerDev"  class="center__children border-4 hover__transition tooltip tooltip-top tooltip-primary" data-tip="GitHub">       
             <ion-icon name="logo-github" size="large" ></ion-icon>
         </a>
-        <a @click="exitSequence" href="https://twitter.com/angus_gaukroger" class="center__children border-4 hover__transition tooltip tooltip-top tooltip-primary" data-tip="Twitter">            
+        <a href="https://twitter.com/angus_gaukroger" class="center__children border-4 hover__transition tooltip tooltip-top tooltip-primary" data-tip="Twitter">            
             <ion-icon name="logo-twitter" size="large"></ion-icon>
         </a>
         <div class="center__children "></div>
-        <a @click="exitSequence" href="https://www.linkedin.com/in/angusgaukroger/" class="center__children border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="LinkedIn">            
+        <a href="https://www.linkedin.com/in/angusgaukroger/" class="center__children border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="LinkedIn">            
             <ion-icon name="logo-linkedin" size="large"></ion-icon>
         </a>
         <div class="center__children border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="Contact">            
@@ -20,11 +20,11 @@
 <script setup>
 import {useRouter} from 'vue-router';
 const router = useRouter();
-const emit = defineEmits(['redirect'])
+// const emit = defineEmits(['redirect'])
 
-function exitSequence() {
-    emit('redirect');
-}
+// function exitSequence() {
+//     emit('redirect');
+// }
 </script>
 
 <style lang="scss" scoped>

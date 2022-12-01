@@ -1,17 +1,17 @@
 <template>
     <div class="page__subgrid2 floating  ">
-        <div class="center__children child1__subgrid2 border-4 hover__transition tooltip tooltip-top tooltip-primary" data-tip="CV">
+        <div class="center__children child1__subgrid2 border-4 hover__transition text-black bg-white dark:text-white dark:bg-black tooltip tooltip-top tooltip-primary" @click="router.push('/CV')" data-tip="CV">
             <ion-icon size="large" name="document-text"></ion-icon>
         </div>
-        <div class="center__children border-4 hover__transition tooltip tooltip-top tooltip-primary" data-tip="Projects">
+        <div class="center__children border-4 hover__transition text-black bg-white dark:text-white dark:bg-black tooltip tooltip-top tooltip-primary" @click="router.push('/Projects')" data-tip="Projects">
             <ion-icon size="large" name="build"></ion-icon>
         </div>
-        <div class="center__children border-4 hover__transition tooltip tooltip-right tooltip-primary" data-tip="My Stack">
+        <div class="center__children border-4 hover__transition text-black bg-white dark:text-white dark:bg-black tooltip tooltip-right tooltip-primary" @click="router.push('/Stack')" data-tip="My Stack">
             <ion-icon size="large" name="cube"></ion-icon>
         </div>
-        <div class="center__children  border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="Toggle Light/Dark Mode">
+        <div class="center__children  border-4 hover__transition text-black bg-white dark:text-white dark:bg-black tooltip tooltip-bottom tooltip-primary" @click="toggleDark()" data-tip="Light/Dark Mode">
             <ion-icon size="large" name="contrast"></ion-icon></div>
-        <a @click="exitSequence" href="https://connectdorset.com/" class="center__children border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="My Business - Connect Dorset" >
+        <a  href="https://connectdorset.com/" class="center__children border-4 hover__transition text-black bg-white dark:text-white dark:bg-black tooltip tooltip-bottom tooltip-primary" data-tip="My Business - Connect Dorset" >
             <ion-icon v-show="business==false" size="large" name="business"></ion-icon>
             <!-- <span class="hover__font" v-show="business">My Business</span> -->
         </a>
@@ -20,13 +20,21 @@
 
 <script setup>
 import { ref } from 'vue';
+import {useRouter} from 'vue-router';
+import {useDark, useToggle} from '@vueuse/core';
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+
+const router = useRouter();
+
 let business = ref(false);
 
-const emit = defineEmits(['redirect'])
+// const emit = defineEmits(['redirect'])
 
-function exitSequence() {
-    emit('redirect');
-}
+// function exitSequence() {
+//     emit('redirect');
+// }
 </script>
 
 <style lang="scss" scoped>

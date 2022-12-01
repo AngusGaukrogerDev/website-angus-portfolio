@@ -1,8 +1,7 @@
 <template>
-    <div id="FlipCard" class="flip-card">
-        <div id="CardInner" class="flip-card-inner" >
-            
-            <div id="CardFront" class="flip-card-front w-screen  h-screen  page__grid">
+    <div id="FlipCard" class="flip-card ">
+        <div id="CardInner" class="flip-card-inner -black" >       
+            <div id="CardFront" class="flip-card-front w-screen bg-white dark:bg-black h-screen  page__grid ">
                 
                 <div></div>
                 <div></div>
@@ -19,30 +18,22 @@
                 leave-from="opacity-100 rotate-0 scale-100 "
                 leave-to="opacity-0 scale-95 "
                 >
-                    <div class="border-4 flex row justify-center items-center">
+                    <div class="border-4 flex row justify-center items-center ">
                         
-                        <div>
+                        <div class="">
                             
-                        <h1 class="">Angus Gaukroger</h1>
+                        <h1 class=" dark:bg-black dark:text-white">Angus Gaukroger</h1>
                         <h2 class="">Full Stack Software Developer</h2>
                         </div> 
                     </div>
                 </TransitionRoot>
-                        
-                     
-                
-                
             </div>
             
-            <div id="CardBack" class="flip-card-back w-screen  h-screen  page__grid ">
-                
-                    <SubGrid1 @redirect="exitDOM"/>   
-                
-                    <Subgrid2 @redirect="exitDOM"/>
-
-                    <Subgrid4 @redirect="exitDOM"/>
-                    <Subgrid3 />
-                          
+            <div id="CardBack" class="flip-card-back w-screen h-screen  page__grid ">               
+                    <SubGrid1/>                  
+                    <Subgrid2/>
+                    <Subgrid4 />
+                    <Subgrid3 />              
             </div>
     
         </div>
@@ -68,7 +59,6 @@
     }
 </script>
 <style lang="scss" scoped >
-
 .page__grid{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -116,7 +106,7 @@
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
+  from, to { border-color: white }
   50% { border-color: black; }
 }
 
@@ -125,8 +115,8 @@
     display: inline-block;
     padding: 1em 2em;
     text-align: center;
-    color: black;
-    background: white; /* default color */
+    /* color: black; */
+    /* background: white; */
 
     /* "to left" / "to right" - affects initial color */
     background: linear-gradient(to left, white 50%, black 50%) right;
@@ -140,7 +130,7 @@
 }
 
 .flip-card {
-  background-color: transparent;
+  /* background-color: transparent; */
   width: 100vw;
   height: 100vh;
   border: 1px solid black;
@@ -170,7 +160,7 @@
 
 .flip-card-front {
   background-color: white;
-  color: black;
+  
 }
 
 /* Style the back side */
