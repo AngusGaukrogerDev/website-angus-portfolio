@@ -16,7 +16,11 @@
 </template>
 
 <script setup>
+const emit = defineEmits(['redirect'])
 
+function exitSequence() {
+    emit('redirect');
+}
 </script>
 
 <style lang="scss" scoped>

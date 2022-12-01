@@ -1,7 +1,9 @@
 <template>
     <div id="FlipCard" class="flip-card">
         <div id="CardInner" class="flip-card-inner" >
+            
             <div id="CardFront" class="flip-card-front w-screen  h-screen  page__grid">
+                
                 <div></div>
                 <div></div>
                 <div></div>
@@ -18,7 +20,9 @@
                 leave-to="opacity-0 scale-95 "
                 >
                     <div class="border-4 flex row justify-center items-center">
+                        
                         <div>
+                            
                         <h1 class="">Angus Gaukroger</h1>
                         <h2 class="">Full Stack Software Developer</h2>
                         </div> 
@@ -29,15 +33,18 @@
                 
                 
             </div>
+            
             <div id="CardBack" class="flip-card-back w-screen  h-screen  page__grid ">
-                <SubGrid1 />   
-                <Subgrid2 />
-                <Subgrid4 />
-                <Subgrid3 />
-
-
                 
+                    <SubGrid1 @redirect="exitDOM"/>   
+                
+                    <Subgrid2 @redirect="exitDOM"/>
+
+                    <Subgrid4 @redirect="exitDOM"/>
+                    <Subgrid3 />
+                          
             </div>
+    
         </div>
     </div>
        
@@ -48,17 +55,20 @@
     import Subgrid2 from './NavGrid/Subgrid2.vue'
     import Subgrid3 from './NavGrid/Subgrid3.vue'
     import Subgrid4 from './NavGrid/Subgrid4.vue'
+
     import { TransitionRoot } from '@headlessui/vue'
     import { onMounted, ref } from 'vue'
     import {useRouter} from 'vue-router';
     
-    const isShowing = ref(true)
-    // onMounted(() => { 
-        
-    //     isShowing.value = true;
-    // })
+    let isShowing = ref(true);
+    let clearDOM = ref(true);
+
+    function exitDOM() {
+        clearDOM.value = false;
+    }
 </script>
 <style lang="scss" scoped >
+
 .page__grid{
     display: grid;
     grid-template-columns: auto auto auto;

@@ -11,17 +11,22 @@
         </div>
         <div class="center__children  border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="Toggle Light/Dark Mode">
             <ion-icon size="large" name="contrast"></ion-icon></div>
-        <div class="center__children border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="My Business - Connect Dorset" >
+        <a @click="exitSequence" href="https://connectdorset.com/" class="center__children border-4 hover__transition tooltip tooltip-bottom tooltip-primary" data-tip="My Business - Connect Dorset" >
             <ion-icon v-show="business==false" size="large" name="business"></ion-icon>
             <!-- <span class="hover__font" v-show="business">My Business</span> -->
-        </div>
+        </a>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-
 let business = ref(false);
+
+const emit = defineEmits(['redirect'])
+
+function exitSequence() {
+    emit('redirect');
+}
 </script>
 
 <style lang="scss" scoped>
