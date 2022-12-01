@@ -1,6 +1,6 @@
 <template>
-    <div id="FlipCard" class="flip-card ">
-        <div id="CardInner" class="flip-card-inner -black" >       
+    <div id="FlipCard" class="flip-card bg-white dark:bg-black">
+        <div id="CardInner" class="flip-card-inner " >       
             <div id="CardFront" class="flip-card-front w-screen bg-white dark:bg-black h-screen  page__grid ">
                 
                 <div></div>
@@ -29,7 +29,7 @@
                 </TransitionRoot>
             </div>
             
-            <div id="CardBack" class="flip-card-back w-screen h-screen  page__grid ">               
+            <div id="CardBack" class="flip-card-back w-screen h-screen bg-white dark:bg-black page__grid ">               
                     <SubGrid1/>                  
                     <Subgrid2/>
                     <Subgrid4 />

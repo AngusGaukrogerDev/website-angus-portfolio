@@ -1,5 +1,5 @@
 <template>
-    <div class="child3__subgrid1 center__children floating border-4">
+    <div class="child3__subgrid1 center__children floating border-4 bg-white dark:bg-black">
         <a class="scrolling__text">Hey! Welcome to my personal portfolio.</a>
     </div>
 </template>
