@@ -1,132 +1,176 @@
 <template>
-    <div id="FlipCard" class="flip-card bg-white dark:bg-black">
-        <div id="CardInner" class="flip-card-inner " >       
-            <div id="CardFront" class="flip-card-front w-screen bg-white dark:bg-black h-screen  page__grid ">
-                
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>  
-                <TransitionRoot
-                appear
-                :show="isShowing"
-                as="template"
-                enter="transform transition duration-[400ms]"
-                enter-from="opacity-0 rotate-[-120deg] scale-50"
-                enter-to="opacity-100 rotate-0 scale-100"
-                leave="transform duration-200 transition ease-in-out"
-                leave-from="opacity-100 rotate-0 scale-100 "
-                leave-to="opacity-0 scale-95 "
-                >
-                    <div class="border-4 flex row justify-center items-center ">
-                        
-                        <div class="">
-                            
-                        <h1 class=" dark:bg-black dark:text-white">Angus Gaukroger</h1>
-                        <h2 class="">Full Stack Software Developer</h2>
-                        </div> 
-                    </div>
-                </TransitionRoot>
+  <div id="FlipCard" class="flip-card bg-white dark:bg-black">
+    <div id="CardInner" class="flip-card-inner">
+      <div
+        id="CardFront"
+        class="flip-card-front w-screen bg-white dark:bg-black h-screen page__grid"
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <TransitionRoot
+          appear
+          :show="isShowing"
+          as="template"
+          enter="transform transition duration-[400ms]"
+          enter-from="opacity-0 rotate-[-120deg] scale-50"
+          enter-to="opacity-100 rotate-0 scale-100"
+          leave="transform duration-200 transition ease-in-out"
+          leave-from="opacity-100 rotate-0 scale-100 "
+          leave-to="opacity-0 scale-95 "
+        >
+          <div class="border-4 flex row justify-center items-center">
+            <div class="">
+              <h1 class="dark:bg-black dark:text-white">Angus Gaukroger</h1>
+              <h2 class="">Full Stack Software Developer</h2>
             </div>
-            
-            <div id="CardBack" class="flip-card-back w-screen h-screen bg-white dark:bg-black page__grid ">               
-                    <SubGrid1/>                  
-                    <Subgrid2/>
-                    <Subgrid4 />
-                    <Subgrid3 />              
-            </div>
-    
-        </div>
+          </div>
+        </TransitionRoot>
+      </div>
+
+      <div
+        id="CardBack"
+        class="flip-card-back w-screen h-screen bg-white dark:bg-black page__grid"
+      >
+        <SubGrid1 />
+        <Subgrid2 @dark-changed="darkSwitcher" />
+        <Subgrid4 />
+        <Subgrid3 />
+      </div>
     </div>
-       
+  </div>
 </template>
 
 <script setup>
-    import SubGrid1 from './NavGrid/Subgrid1.vue'
-    import Subgrid2 from './NavGrid/Subgrid2.vue'
-    import Subgrid3 from './NavGrid/Subgrid3.vue'
-    import Subgrid4 from './NavGrid/Subgrid4.vue'
+import SubGrid1 from "./NavGrid/Subgrid1.vue";
+import Subgrid2 from "./NavGrid/Subgrid2.vue";
+import Subgrid3 from "./NavGrid/Subgrid3.vue";
+import Subgrid4 from "./NavGrid/Subgrid4.vue";
 
-    import { TransitionRoot } from '@headlessui/vue'
-    import { onMounted, ref } from 'vue'
-    import {useRouter} from 'vue-router';
-    
-    let isShowing = ref(true);
-    let clearDOM = ref(true);
+import { TransitionRoot } from "@headlessui/vue";
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
+import { useDark, useToggle } from "@vueuse/core";
 
-    function exitDOM() {
-        clearDOM.value = false;
-    }
-</script>
-<style lang="scss" scoped >
-.page__grid{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto; 
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    grid-column-gap: 2%;
-    grid-row-gap: 2%;
+let colorScheme = ref("linear-gradient(to left, white 50%, black 50%) right");
+let hoverColor = ref("white");
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+
+function darkSwitcher() {
+  toggleDark();
+  if (isDark) {
+    colorScheme.value = "linear-gradient(to left, white 50%, black 50%) right";
+    hoverColor.value = "white";
+  } else {
+    colorScheme.value = "linear-gradient(to left, black 50%, white 50%) right";
+    hoverColor.value = "black";
+  }
 }
+onMounted(() => {
+  console.log(isDark);
+  if (isDark) {
+    colorScheme.value = "linear-gradient(to left, white 50%, black 50%) right";
+    hoverColor.value = "white";
+  } else {
+    colorScheme.value = "linear-gradient(to left, black 50%, white 50%) right";
+    hoverColor.value = "black";
+  }
+});
+let isShowing = ref(true);
+// let clearDOM = ref(true);
 
-
+// function changeHoverDark() {
+//   colorScheme.value = "linear-gradient(to left, black 50%, white 50%) right";
+//   hoverColor.value = "black";
+// }
+// function changeHoverLight() {
+//   colorScheme.value = "linear-gradient(to left, white 50%, black 50%) right";
+//   hoverColor.value = "white";
+// }
+</script>
+<style lang="scss" scoped>
+.page__grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+}
 </style>
 <style>
-.floating { 
-    animation-name: floating;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
-}
- 
-@keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(-15px, -15px); }
-    100%   { transform: translate(0, -0px); }   
+.floating {
+  animation-name: floating;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
 }
 
-.scrolling__text{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid black; /* The typwriter cursor */
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(-15px, -15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.scrolling__text {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid black; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .1em; /* Adjust as needed */
-  animation: 
-    typing 5s steps(38, end),
-    blink-caret 1.5s step-end infinite;
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 5s steps(38, end), blink-caret 1.5s step-end infinite;
 }
 @keyframes typing {
-  from { width: 0 }
-  to { width: 80% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: white }
-  50% { border-color: black; }
+  from,
+  to {
+    border-color: white;
+  }
+  50% {
+    border-color: black;
+  }
 }
 
 .hover__transition {
-    font: 22px Arial;
-    display: inline-block;
-    padding: 1em 2em;
-    text-align: center;
-    /* color: black; */
-    /* background: white; */
+  font: 22px Arial;
+  display: inline-block;
+  padding: 1em 2em;
+  text-align: center;
+  /*color: v-bind(hoverColor);*/
+  /*background: v-bind(hoverColor);*/
 
-    /* "to left" / "to right" - affects initial color */
-    background: linear-gradient(to left, white 50%, black 50%) right;
-    background-size: 200%;
-    transition: .5s ease-out;
+  /* "to left" / "to right" - affects initial color */
+  background: v-bind(colorScheme);
+  background-size: 200%;
+  transition: 0.5s ease-out;
 }
 .hover__transition:hover {
-    background-position: left;
-    cursor: pointer;
-    color: white;
+  background-position: left;
+  cursor: pointer;
+  color: v-bind(hoverColor);
 }
 
 .flip-card {
@@ -150,7 +194,8 @@
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -160,7 +205,6 @@
 
 .flip-card-front {
   background-color: white;
-  
 }
 
 /* Style the back side */
@@ -170,18 +214,17 @@
   transform: rotateY(180deg);
 }
 
-.center__children{
-    display: flex;
-    direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5% 5% 5% 5%;
-    border-color: #f3f4f6;
-    
+.center__children {
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 5% 5% 5%;
+  border-color: #f3f4f6;
 }
 
-.floating__borders{
-    border-color: 8px solid #4b5563;
-    border-radius: 25px;
+.floating__borders {
+  border-color: 8px solid #4b5563;
+  border-radius: 25px;
 }
 </style>
