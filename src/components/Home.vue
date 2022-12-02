@@ -13,7 +13,7 @@
           appear
           :show="isShowing"
           as="template"
-          enter="transform transition duration-[400ms]"
+          enter="transform transition duration-[800ms]"
           enter-from="opacity-0 rotate-[-120deg] scale-50"
           enter-to="opacity-100 rotate-0 scale-100"
           leave="transform duration-200 transition ease-in-out"
@@ -61,22 +61,25 @@ const toggleDark = useToggle(isDark);
 
 function darkSwitcher() {
   toggleDark();
-  if (isDark) {
-    colorScheme.value = "linear-gradient(to left, white 50%, black 50%) right";
-    hoverColor.value = "white";
-  } else {
+  if (isDark.value) {
     colorScheme.value = "linear-gradient(to left, black 50%, white 50%) right";
     hoverColor.value = "black";
+    console.log(isDark);
+  } else {
+    colorScheme.value = "linear-gradient(to left, white 50%, black 50%) right";
+    hoverColor.value = "white";
+    console.log(isDark);
   }
 }
 onMounted(() => {
-  console.log(isDark);
-  if (isDark) {
-    colorScheme.value = "linear-gradient(to left, white 50%, black 50%) right";
-    hoverColor.value = "white";
-  } else {
+  if (isDark.value) {
     colorScheme.value = "linear-gradient(to left, black 50%, white 50%) right";
     hoverColor.value = "black";
+    console.log(isDark);
+  } else {
+    colorScheme.value = "linear-gradient(to left, white 50%, black 50%) right";
+    hoverColor.value = "white";
+    console.log(isDark);
   }
 });
 let isShowing = ref(true);
