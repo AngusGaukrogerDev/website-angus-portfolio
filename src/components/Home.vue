@@ -1,4 +1,4 @@
-<template>
+<template class="home__default">
   <div id="FlipCard" class="flip-card bg-white dark:bg-black">
     <div id="CardInner" class="flip-card-inner">
       <div
@@ -23,7 +23,7 @@
           <div class="border-4 flex row justify-center items-center">
             <div class="">
               <h1 class="dark:bg-black dark:text-white">Angus Gaukroger</h1>
-              <h2 class="">Full Stack Software Developer</h2>
+              <h2 class="">Full-Stack Software Developer</h2>
             </div>
           </div>
         </TransitionRoot>
@@ -95,6 +95,9 @@ let isShowing = ref(true);
 // }
 </script>
 <style lang="scss" scoped>
+.home__default{
+  overflow: hidden;
+}
 .page__grid {
   display: grid;
   grid-template-columns: auto auto auto;

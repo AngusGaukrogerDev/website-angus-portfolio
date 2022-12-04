@@ -15,5 +15,6 @@ html.dark {
 body {
   @apply dark:bg-black dark:text-white dark:border-white;
   overflow: hidden;
+  font-family: 'Patua One', cursive;
 }
 </style>
