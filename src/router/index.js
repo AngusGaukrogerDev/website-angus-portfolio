@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '/src/components/Home.vue';
 import About from '/src/components/PortElements/About.vue';
-import Business from '/src/components/PortElements/Business.vue';
+
 import Contact from '/src/components/PortElements/Contact.vue';
 import CV from '/src/components/PortElements/CV.vue';
 import Goals from '/src/components/PortElements/Goals.vue';
@@ -20,11 +20,6 @@ const routes = [
         path: '/About',
         name: 'About',
         component: About,
-    },
-    {
-        path: '/Business',
-        name: 'Business',
-        component: Business,
     },
     {
         path: '/Contact',
