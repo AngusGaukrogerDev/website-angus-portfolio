@@ -50,7 +50,6 @@ import Subgrid4 from "./NavGrid/Subgrid4.vue";
 
 import { TransitionRoot } from "@headlessui/vue";
 import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
 import { useDark, useToggle } from "@vueuse/core";
 
 let colorScheme = ref("linear-gradient(to left, white 50%, black 50%) right");
