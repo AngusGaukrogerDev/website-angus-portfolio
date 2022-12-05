@@ -31,7 +31,7 @@
                     <div class=""></div>
 
                         <section class="star-wars">
-                        <div class="crawl">
+                        <!-- <div class="crawl">
                             <div class="title">
                             <p>Angus Gaukroger</p>
                             <h1>Full-Stack Software Engineer</h1>
@@ -95,7 +95,7 @@
                                 <h2>Music – Bassist and Guitarist.</h2>
                                 <h2>Practicing Spanish.</h2>
                             </div>
-                        </div>
+                        </div> -->
                         </section>
                     </div>
                 </div>
