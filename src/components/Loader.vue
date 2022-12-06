@@ -1,18 +1,19 @@
-<template>
+<template >
   <!-- This entire component is purely aesthetic, I know how to wire it up so it actually serves the purpose of waiting for everything to load, but that's not what it does,
     purely aesthetic, hate me if you want... it's my port ;) -->
-
-  <div class="loader" v-if="!isLoaded">
-    <div class="small__square1"></div>
-    <div class=""></div>
-    <div class=""></div>
-    <div class="small__square2"></div>
-  </div>
+  <div class="">
+    <div class="loader  " v-if="!isLoaded">
+      <div class="small__square1"></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class="small__square2"></div>
+    </div>
+</div>
 </template>
 
 <script setup>
 import { useDark, useToggle } from "@vueuse/core";
-import { ref, onMounted, defineEmits } from "vue";
+import { ref, onMounted } from "vue";
 
 let isLoaded = ref(false);
 const emit = defineEmits("complete");

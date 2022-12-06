@@ -1,6 +1,6 @@
 <template class="home__default">
   <Loader @complete="ready = true" />
-  <Loader v-if="redirect == true" />
+
   <div v-if="ready" id="FlipCard" class="flip-card bg-white dark:bg-black">
     <div id="CardInner" class="flip-card-inner">
       <div
@@ -236,5 +236,11 @@ let isShowing = ref(true);
 .floating__borders {
   border-color: 8px solid #4b5563;
   border-radius: 25px;
+}
+.center__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>

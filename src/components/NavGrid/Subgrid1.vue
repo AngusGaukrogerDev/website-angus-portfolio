@@ -5,14 +5,14 @@
       @click="router.push('/About')"
       data-tip="About Me"
     >
-      <ion-icon size="large" name="information-circle"></ion-icon>
+      <ion-icon size="large" name="finger-print"></ion-icon>
     </div>
     <div
       class="center__children border-4 hover__transition tooltip tooltip-top tooltip-primary"
-      @click="router.push('/Music')"
-      data-tip="Music"
+      @click="router.push('/Quotes')"
+      data-tip="Quotes"
     >
-      <ion-icon size="large" name="musical-notes"></ion-icon>
+      <ion-icon size="large" name="megaphone"></ion-icon>
     </div>
     <div
       class="center__children child1__subgrid3 border-4 hover__transition tooltip tooltip-bottom tooltip-primary"

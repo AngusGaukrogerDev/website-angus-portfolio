@@ -22,7 +22,7 @@
       <div
         class="flip-card-back w-screen h-screen bg-white dark:bg-black stack__grid__main"
       >
-        <div class="stack__grid center__content">
+        <div class="stack__grid center__content__stack">
           <TransitionRoot
             appear
             :show="fadeInElements"
@@ -34,13 +34,13 @@
             leave-from="opacity-100 rotate-0 scale-100 "
             leave-to="opacity-0 scale-95 "
           >
-            <div class="center__content w-3/12 h-5/12 p-4 border-4">
+            <div class="center__content__stack w-3/12 h-5/12 p-4 border-4">
               <ion-icon size="large" name="logo-vue"></ion-icon>
               Vue.js
             </div>
           </TransitionRoot>
         </div>
-        <div class="stack__grid center__content">
+        <div class="stack__grid center__content__stack">
           <TransitionRoot
             appear
             :show="fadeInElements"
@@ -52,13 +52,13 @@
             leave-from="opacity-100 rotate-0 scale-100 "
             leave-to="opacity-0 scale-95 "
           >
-            <div class="center__content w-3/12 h-5/12 p-4 border-4">
+            <div class="center__content__stack w-3/12 h-5/12 p-4 border-4">
               <ion-icon size="large" name="logo-sass"></ion-icon>
               SASS
             </div>
           </TransitionRoot>
         </div>
-        <div class="stack__grid center__content">
+        <div class="stack__grid center__content__stack">
           <TransitionRoot
             appear
             :show="fadeInElements"
@@ -70,13 +70,13 @@
             leave-from="opacity-100 rotate-0 scale-100 "
             leave-to="opacity-0 scale-95 "
           >
-            <div class="center__content w-3/12 h-5/12 p-4 border-4">
+            <div class="center__content__stack w-3/12 h-5/12 p-4 border-4">
               <ion-icon size="large" name="logo-nodejs"></ion-icon>
               Node.js
             </div>
           </TransitionRoot>
         </div>
-        <div class="stack__grid center__content">
+        <div class="stack__grid center__content__stack">
           <TransitionRoot
             appear
             :show="fadeInElements"
@@ -88,7 +88,7 @@
             leave-from="opacity-100 rotate-0 scale-100 "
             leave-to="opacity-0 scale-95 "
           >
-            <div class="center__content w-3/12 h-5/12 p-4 border-4">
+            <div class="center__content__stack w-3/12 h-5/12 p-4 border-4">
               <ion-icon size="large" name="logo-html5"></ion-icon>
               HTML5
             </div>
@@ -97,12 +97,12 @@
         <div
           @mouseover="fadeInElements = true"
           @mouseleave="fadeInElements = false"
-          class="stack__grid center__content floating border-4"
+          class="stack__grid center__content__stack floating border-4"
         >
           Some Of My Favourite Technologies!
           <span class="bold" v-if="!fadeInElements">Tip: Hover here!</span>
         </div>
-        <div class="stack__grid center__content">
+        <div class="stack__grid center__content__stack">
           <TransitionRoot
             appear
             :show="fadeInElements"
@@ -114,13 +114,13 @@
             leave-from="opacity-100 rotate-0 scale-100 "
             leave-to="opacity-0 scale-95 "
           >
-            <div class="center__content w-3/12 h-5/12 p-4 border-4">
+            <div class="center__content__stack w-3/12 h-5/12 p-4 border-4">
               <ion-icon size="large" name="logo-stackoverflow"></ion-icon>
               ;)
             </div>
           </TransitionRoot>
         </div>
-        <div class="stack__grid center__content">
+        <div class="stack__grid center__content__stack">
           <TransitionRoot
             appear
             :show="fadeInElements"
@@ -132,14 +132,14 @@
             leave-from="opacity-100 rotate-0 scale-100 "
             leave-to="opacity-0 scale-95 "
           >
-            <div class="center__content w-3/12 h-5/12 p-4 border-4">
+            <div class="center__content__stack w-3/12 h-5/12 p-4 border-4">
               <img src="../../assets/netlogo.png" />
               .NET Core
             </div>
           </TransitionRoot>
         </div>
 
-        <div class="stack__grid center__content">
+        <div class="stack__grid center__content__stack">
           <TransitionRoot
             appear
             :show="fadeInElements"
@@ -151,17 +151,17 @@
             leave-from="opacity-100 rotate-0 scale-100 "
             leave-to="opacity-0 scale-95 "
           >
-            <div class="center__content w-3/12 h-5/12 p-4 border-4">
+            <div class="center__content__stack w-3/12 h-5/12 p-4 border-4">
               <img v-if="!isDark" src="../../assets/tailwindcss.png" />
               <img v-if="isDark" src="../../assets/tailwindcss2.png" />
               TailwindCSS
             </div>
           </TransitionRoot>
         </div>
-        <div class="stack__grid center__content">
+        <div class="stack__grid center__content__stack">
           <div class=" ">
             <div
-              class="center__content return__button border-4 cursor-pointer hover__transition tooltip tooltip-top tooltip-primary"
+              class="center__content__stack return__button border-4 cursor-pointer hover__transition tooltip tooltip-top tooltip-primary"
               data-tip="Return"
               @click="router.push('/')"
             >
@@ -204,7 +204,7 @@ let fadeInElements = ref(false);
   grid-row: 1 / span 2;
   grid-column: 2 / span 1;
 }
-.center__content {
+.center__content__stack{
   display: flex;
   flex-direction: column;
   justify-content: center;

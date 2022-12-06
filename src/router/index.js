@@ -5,7 +5,7 @@ import About from '/src/components/PortElements/About.vue';
 import Contact from '/src/components/PortElements/Contact.vue';
 import CV from '/src/components/PortElements/CV.vue';
 import Goals from '/src/components/PortElements/Goals.vue';
-import Music from '/src/components/PortElements/Music.vue';
+import Quotes from '/src/components/PortElements/Quotes.vue';
 import Projects from '/src/components/PortElements/Projects.vue';
 import Stack from '/src/components/PortElements/Stack.vue';
 import Travel from '/src/components/PortElements/Travel.vue';
@@ -37,9 +37,9 @@ const routes = [
         component: Goals,
     },
     {
-        path: '/Music',
-        name: 'Music',
-        component: Music,
+        path: '/Quotes',
+        name: 'Quotes',
+        component: Quotes,
     },
     {
         path: '/Projects',
