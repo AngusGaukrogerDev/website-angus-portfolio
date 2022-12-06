@@ -1,5 +1,6 @@
 <template class="home__default">
   <Loader @complete="ready = true" />
+  <Loader v-if="redirect == true" />
   <div v-if="ready" id="FlipCard" class="flip-card bg-white dark:bg-black">
     <div id="CardInner" class="flip-card-inner">
       <div
@@ -36,7 +37,7 @@
       >
         <SubGrid1 />
         <Subgrid2 @dark-changed="darkSwitcher" />
-        <Subgrid4 />
+        <Subgrid4 @redirect="redirect = true" />
         <Subgrid3 />
       </div>
     </div>
@@ -57,6 +58,7 @@ import Loader from "./Loader.vue";
 let colorScheme = ref("linear-gradient(to left, white 50%, black 50%) right");
 let hoverColor = ref("white");
 let ready = ref(false);
+let redirect = ref(false);
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
@@ -77,11 +79,11 @@ onMounted(() => {
   if (isDark.value) {
     colorScheme.value = "linear-gradient(to left, black 50%, white 50%) right";
     hoverColor.value = "black";
-    console.log(isDark);
+    // console.log(isDark);
   } else {
     colorScheme.value = "linear-gradient(to left, white 50%, black 50%) right";
     hoverColor.value = "white";
-    console.log(isDark);
+    // console.log(isDark);
   }
 });
 let isShowing = ref(true);
