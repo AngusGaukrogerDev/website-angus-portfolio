@@ -1,5 +1,6 @@
 <template class="home__default">
-  <div id="FlipCard" class="flip-card bg-white dark:bg-black">
+  <Loader @complete="ready = true" />
+  <div v-if="ready" id="FlipCard" class="flip-card bg-white dark:bg-black">
     <div id="CardInner" class="flip-card-inner">
       <div
         id="CardFront"
@@ -51,9 +52,11 @@ import Subgrid4 from "./NavGrid/Subgrid4.vue";
 import { TransitionRoot } from "@headlessui/vue";
 import { onMounted, ref } from "vue";
 import { useDark, useToggle } from "@vueuse/core";
+import Loader from "./Loader.vue";
 
 let colorScheme = ref("linear-gradient(to left, white 50%, black 50%) right");
 let hoverColor = ref("white");
+let ready = ref(false);
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
@@ -94,7 +97,7 @@ let isShowing = ref(true);
 // }
 </script>
 <style lang="scss" scoped>
-.home__default{
+.home__default {
   overflow: hidden;
 }
 .page__grid {
