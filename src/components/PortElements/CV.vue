@@ -1,5 +1,6 @@
 <template class="CV overflow-visible">
-    <div id="FlipCard" class="flip-card bg-white dark:bg-black">
+    <Loader @complete="ready = true" />
+    <div v-if="ready" id="FlipCard" class="flip-card bg-white dark:bg-black">
         <div id="CardInner" class="flip-card-inner">
             <div id="CardFront" class="flip-card-front w-screen bg-white dark:bg-black h-screen flex justify-center items-center">
                 <div></div>
@@ -27,19 +28,56 @@
             </div>
 
             <div id="CardBack" class="flip-card-back w-screen h-screen bg-white dark:bg-black flex column justify-center items-center ">
-                <div class=" bg-white dark:bg-black">
-                    <div class=""></div>
+                <div  class="bg-white dark:bg-black   ">  
+                  <div v-if="defaultView" class="default__grid  w-screen">   
+                    <div></div>         
+                    <div  class="button__display__top  p-5">
+                      <div></div>
+                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating1">About</div>
+                      <div></div>
+                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating2">Software Experience</div>
+                      <div></div>
+                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating3">Education</div>
+                      <div></div>
+                    </div>
+                    <div></div>         
+                    <div class="button__display__bottom p-5">
+                      <div></div>
+                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating4">Other Experience</div>
+                      <div></div>
+                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating1">Other Information</div>
+                      <div></div>
+                      
+                    </div>
+                    <div>
+                      <div class=" ">
+                        <div
+                          class="center__content__stack return__button border-4 cursor-pointer hover__transition tooltip tooltip-top tooltip-primary hover:scale-110"
+                          data-tip="Return"
+                          @click="router.push('/')"
+                        >
+                          <ion-icon size="large" name="return-up-back"> </ion-icon>
+                        </div>
+                      </div>
+                    </div>         
 
-                        <section class="star-wars">
-                        <!-- <div class="crawl">
-                            <div class="title">
-                            <p>Angus Gaukroger</p>
-                            <h1>Full-Stack Software Engineer</h1>
-                            </div>
-                            <p>Junior Software Engineer with a keen interest in building a career in web development.</p>
+                  </div>
+                    <!-- Scrolling text section -->
+                    <div class="">    
+                        <section v-if="aboutSection" class="star-wars">
+                          <div class="crawl">
+                              <div class="title">
+                                <p>Angus Gaukroger</p>
+                                <h1>Full-Stack Software Engineer</h1>
+                              </div>
+                              <p>Junior Software Engineer with a keen interest in building a career in web development.</p>
 
-                            <p>Highly motivated individual searching for an opportunity to learn new technologies, improve programming skills and grow as a developer within a software team.</p>
-                            <p>Experienced in a variety of programming languages in an industrial and academic environment, as well as for personal projects.</p>
+                              <p>Highly motivated individual searching for an opportunity to learn new technologies, improve programming skills and grow as a developer within a software team.</p>
+                              <p>Experienced in a variety of programming languages in an industrial and academic environment, as well as for personal projects.</p>
+                          </div>                      
+                        </section>
+                        <section v-if="experienceSection"  class="star-wars">
+                          <div class="crawl">
                             <div class="title">
                                 <h1>Software Developer Experience</h1>
                                 <h2>Junior Software Engineer – Loop Technology Ltd </h2>
@@ -56,12 +94,20 @@
                             <p>• Used KUKA Programming Language to configure robot to perform tasks in 3D space.</p>
                             <p>• Responsible for development of stepper motor control system.</p>
                             <p>• Worked alone as well as with other software engineers on each project.</p>
+                          </div>
+                        </section>
+                        <section v-if="educationSection" class="star-wars">
+                          <div class="crawl">
                             <div class="title">
                                 <h1>Education</h1>
                                 <h2>Electronic Engineering BEng (Hons) - University of Portsmouth – 2:1 Overall</h2>
                                 <h2>A-Levels in Electronics, Maths and Physics</h2>
                                 <h2>12 GCSE’s grades A-C including Maths and English Language</h2> 
                             </div>
+                          </div>
+                        </section>
+                        <section v-if="oExperienceSection" class="star-wars">
+                          <div class="crawl">
                             <div class="title">
                                 <h1>Other Experience</h1>
                                 <h2>UPRacing Electric Formula Student Team</h2>
@@ -83,6 +129,10 @@
                             </div>
                             <p>• Part time job, responsible for individual departments of the store as well as checkouts.</p>
                             <p>• Returned during the COVID-19 pandemic to assist around the store.</p>
+                          </div>
+                        </section>
+                        <section v-if="information" class="star-wars">
+                          <div class="crawl">
                             <div class="title">
                                 <h1>Additional Information</h1>
                                 <h2>Full clean UK driving licence</h2>
@@ -95,8 +145,10 @@
                                 <h2>Music – Bassist and Guitarist.</h2>
                                 <h2>Practicing Spanish.</h2>
                             </div>
-                        </div> -->
+                          </div>
                         </section>
+                          
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -105,11 +157,47 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import Loader from "../Loader.vue";
 
+const router = useRouter();
+let ready = ref(false);
+let defaultView = ref(true);
+let aboutSection = ref(false);
+let experienceSection = ref(false);
+let oExperienceSection = ref(false);
+let educationSection = ref(false);
+let information = ref(false);
 
 </script>
 
 <style lang="scss" scoped>
+.default__grid{
+  display: grid;
+  grid-template-rows: auto 25% auto 25% auto;
+  height: 100vh;
+}
+.button__display__top{
+  display: grid;
+  grid-template-columns: auto 25% auto 25% auto 25% auto;
+  grid-template-rows: 20vh;
+
+}
+.button__display__bottom{
+  display: grid;
+  grid-template-columns: auto 25%  12.5% 25% auto;
+  grid-template-rows: 20vh;
+}
+
+.center__button_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+ 
+}
 .CV{
     overflow: visible;
 }

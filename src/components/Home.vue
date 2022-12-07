@@ -49,11 +49,11 @@ import SubGrid1 from "./NavGrid/Subgrid1.vue";
 import Subgrid2 from "./NavGrid/Subgrid2.vue";
 import Subgrid3 from "./NavGrid/Subgrid3.vue";
 import Subgrid4 from "./NavGrid/Subgrid4.vue";
+import Loader from "./Loader.vue";
 
 import { TransitionRoot } from "@headlessui/vue";
 import { onMounted, ref } from "vue";
 import { useDark, useToggle } from "@vueuse/core";
-import Loader from "./Loader.vue";
 
 let colorScheme = ref("linear-gradient(to left, white 50%, black 50%) right");
 let hoverColor = ref("white");
@@ -165,7 +165,6 @@ let isShowing = ref(true);
 }
 
 .hover__transition {
-  font: 22px Arial;
   display: inline-block;
   padding: 1em 2em;
   text-align: center;
@@ -174,7 +173,9 @@ let isShowing = ref(true);
 
   /* "to left" / "to right" - affects initial color */
   background: v-bind(colorScheme);
-  background-size: 200%;
+  background-size: 250%;
+  object-fit: cover;
+  transform: scale(1.03);
   transition: 0.5s ease-out;
 }
 .hover__transition:hover {
