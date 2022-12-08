@@ -253,7 +253,6 @@ function rollText(area, delayTime){
       break;
 
   }
-  // console.log(section);
   
   
 }
