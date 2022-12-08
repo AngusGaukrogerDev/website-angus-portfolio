@@ -9,7 +9,7 @@
                 <div></div>
                 <TransitionRoot
                 appear
-                :show="isShowing"
+                :show="frontPage"
                 as="template"
                 enter="transform transition duration-[800ms]"
                 enter-from="opacity-0 rotate-[-120deg] scale-50"
@@ -33,24 +33,95 @@
                     <div></div>         
                     <div  class="button__display__top  p-5">
                       <div></div>
-                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating1">About</div>
+                      <TransitionRoot
+                      appear
+                      :show="isShowing"
+                      as="template"
+                      enter="transform transition duration-[800ms]"
+                      enter-from="opacity-0 rotate-[-120deg] scale-50"
+                      enter-to="opacity-100 rotate-0 scale-100"
+                      leave="transform duration-200 transition ease-in-out"
+                      leave-from="opacity-100 rotate-0 scale-100 "
+                      leave-to="opacity-0 scale-95 "
+                      >
+                        <a @click="rollText(1, 17000)" class="border-4 center__button_content hover__transition hover:scale-110 floating1">About</a>
+                      </TransitionRoot>
                       <div></div>
-                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating2">Software Experience</div>
+                      <TransitionRoot
+                      appear
+                      :show="isShowing"
+                      as="template"
+                      enter="transform transition duration-[800ms]"
+                      enter-from="opacity-0 rotate-[-120deg] scale-50"
+                      enter-to="opacity-100 rotate-0 scale-100"
+                      leave="transform duration-200 transition ease-in-out"
+                      leave-from="opacity-100 rotate-0 scale-100 "
+                      leave-to="opacity-0 scale-95 "
+                      >
+                        <a @click="rollText(2, 20000)" class="border-4 center__button_content hover__transition hover:scale-110 floating2">Software Experience</a>
+                      </TransitionRoot>
                       <div></div>
-                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating3">Education</div>
+                      <TransitionRoot
+                      appear
+                      :show="isShowing"
+                      as="template"
+                      enter="transform transition duration-[800ms]"
+                      enter-from="opacity-0 rotate-[-120deg] scale-50"
+                      enter-to="opacity-100 rotate-0 scale-100"
+                      leave="transform duration-200 transition ease-in-out"
+                      leave-from="opacity-100 rotate-0 scale-100 "
+                      leave-to="opacity-0 scale-95 "
+                      >
+                        <a @click="rollText(3, 12000)" class="border-4 center__button_content hover__transition hover:scale-110 floating3">Education</a>
+                      </TransitionRoot>
                       <div></div>
                     </div>
                     <div></div>         
                     <div class="button__display__bottom p-5">
                       <div></div>
-                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating4">Other Experience</div>
+                      <TransitionRoot
+                      appear
+                      :show="isShowing"
+                      as="template"
+                      enter="transform transition duration-[800ms]"
+                      enter-from="opacity-0 rotate-[-120deg] scale-50"
+                      enter-to="opacity-100 rotate-0 scale-100"
+                      leave="transform duration-200 transition ease-in-out"
+                      leave-from="opacity-100 rotate-0 scale-100 "
+                      leave-to="opacity-0 scale-95 "
+                      >
+                        <a @click="rollText(4, 24000)" class="border-4 center__button_content hover__transition hover:scale-110 floating4">Other Experience</a>
+                      </TransitionRoot>
                       <div></div>
-                      <div class="border-4 center__button_content hover__transition hover:scale-110 floating1">Other Information</div>
+                      <TransitionRoot
+                      appear
+                      :show="isShowing"
+                      as="template"
+                      enter="transform transition duration-[800ms]"
+                      enter-from="opacity-0 rotate-[-120deg] scale-50"
+                      enter-to="opacity-100 rotate-0 scale-100"
+                      leave="transform duration-200 transition ease-in-out"
+                      leave-from="opacity-100 rotate-0 scale-100 "
+                      leave-to="opacity-0 scale-95 "
+                      >
+                        <a @click="rollText(5, 10000)" class="border-4 center__button_content hover__transition hover:scale-110 floating1">Other Information</a>
+                      </TransitionRoot>
                       <div></div>
                       
                     </div>
                     <div>
                       <div class=" ">
+                        <TransitionRoot
+                        appear
+                        :show="isShowing"
+                        as="template"
+                        enter="transform transition duration-[800ms]"
+                        enter-from="opacity-0 rotate-[-120deg] scale-50"
+                        enter-to="opacity-100 rotate-0 scale-100"
+                        leave="transform duration-100 transition ease-in-out"
+                        leave-from="opacity-100 rotate-0 scale-100 "
+                        leave-to="opacity-0 scale-95 "
+                        >
                         <div
                           class="center__content__stack return__button border-4 cursor-pointer hover__transition tooltip tooltip-top tooltip-primary hover:scale-110"
                           data-tip="Return"
@@ -58,6 +129,7 @@
                         >
                           <ion-icon size="large" name="return-up-back"> </ion-icon>
                         </div>
+                        </TransitionRoot>
                       </div>
                     </div>         
 
@@ -67,39 +139,33 @@
                         <section v-if="aboutSection" class="star-wars">
                           <div class="crawl">
                               <div class="title">
-                                <p>Angus Gaukroger</p>
-                                <h1>Full-Stack Software Engineer</h1>
+                                <p>Angus Gaukroger - Full-Stack Software Developer</p>
                               </div>
-                              <p>Junior Software Engineer with a keen interest in building a career in web development.</p>
-
-                              <p>Highly motivated individual searching for an opportunity to learn new technologies, improve programming skills and grow as a developer within a software team.</p>
-                              <p>Experienced in a variety of programming languages in an industrial and academic environment, as well as for personal projects.</p>
+                              <p class="py-4">Junior Software Engineer with a keen interest in building a career in web development.</p>
+                              <p class="py-4">Highly motivated individual searching for an opportunity to learn new technologies, improve programming skills and grow as a developer within a software team.</p>
+                              <p class="py-4">Experienced in a variety of programming languages in an industrial and academic environment, as well as for personal projects.</p>
                           </div>                      
                         </section>
                         <section v-if="experienceSection"  class="star-wars">
                           <div class="crawl">
                             <div class="title">
-                                <h1>Software Developer Experience</h1>
-                                <h2>Junior Software Engineer – Loop Technology Ltd </h2>
-                                <h3>09/2021 – Present</h3>
+                                <h2>Junior Software Engineer – Loop Technology Ltd - 09/2021 – Present</h2>
+
                             </div>
-                            <p>• Building ASP.net Core MVC based server application with file handling (Remote Uploads/Downloads) and user accounts. Trusted to work for long periods of time unsupervised and make key design decisions. (C# (Razor), Javascript (JQuery, Three.js), Bootstrap CSS, HTML)</p>
-                            <p>• Worked on projects interpreting TCP/UDP signals using Ethernet (C#) and a research and development project exploring the functionality of EtherCAT motor controllers (C/C++/Python)</p>
-                            <p>• Created WPF based user interface plugins (C#) for KUKA pendants while following MVVM framework.</p>
-                            <p>• Gained experience working with Senior Software Engineers while reporting directly to Software Manager.</p>
+                            <p>• Building ASP.net Core MVC based server application with file handling and user accounts. (C# (Razor), Javascript (JQuery, Three.js), Bootstrap CSS, HTML)</p>
+                            <p>• TCP/UDP signal interpretation using Ethernet (C#). </p>
+                            <p>• Researched the functionality of EtherCAT motor controllers (C/C++/Python)</p>
+                            <p>• Created WPF based user interface plugins (C#)</p>
                             <div class="title">
-                                <h2>Software Engineer Summer Intern – Loop Technology Ltd</h2>
-                                <h3>07/2019 – 09/2019</h3>
+                                <h2>Software Engineer Summer Intern – Loop Technology Ltd - 07/2019 – 09/2019</h2>
                             </div>
-                            <p>• Used KUKA Programming Language to configure robot to perform tasks in 3D space.</p>
-                            <p>• Responsible for development of stepper motor control system.</p>
-                            <p>• Worked alone as well as with other software engineers on each project.</p>
+                            <p>• Programmed Kuka robots in Kuka Robot Language.</p>
+                            <p>• Developed stepper motor control system.</p>
                           </div>
                         </section>
                         <section v-if="educationSection" class="star-wars">
                           <div class="crawl">
                             <div class="title">
-                                <h1>Education</h1>
                                 <h2>Electronic Engineering BEng (Hons) - University of Portsmouth – 2:1 Overall</h2>
                                 <h2>A-Levels in Electronics, Maths and Physics</h2>
                                 <h2>12 GCSE’s grades A-C including Maths and English Language</h2> 
@@ -109,41 +175,31 @@
                         <section v-if="oExperienceSection" class="star-wars">
                           <div class="crawl">
                             <div class="title">
-                                <h1>Other Experience</h1>
-                                <h2>UPRacing Electric Formula Student Team</h2>
-                                <h3>10/2018 – 07/2020</h3>
+                                <h2>UPRacing Electric Formula Student Team 10/2018 – 07/2020</h2>
                             </div>
-                            <p>• Powertrain section head in second year on the team.</p>
-                            <p>• Responsible for design and documentation of entire electric powertrain system.</p>
-                            <p>• Trained and recruited new members.</p>
                             <p>• Formula Student Class 2 Winner at Silverstone 2019 competition.</p>
+                            <p>• Powertrain section head in second year on the team.</p>
+                            <p>• Designed and documented entire electric powertrain system.</p>
+                            <p>• Trained and recruited new members.</p>
                             <div class="title">
-                                <h2>Student Ambassador- University of Portsmouth</h2>
-                                <h3>11/2018 – 06/2021</h3>
+                                <h2>Student Ambassador- University of Portsmouth - 11/2018 – 06/2021</h2>
                             </div>
-                            <p>• Assisted the university on open days in showing round potential students and their families.</p>
-                            <p>• Required good verbal communication skills and teamwork to ensure days ran smoothly.</p>
+                            <p>• Showed potential students and their families around university.</p>
                             <div class="title">
-                                <h2>Customer Service Assistant – Mole Country Stores, Dorchester</h2>
-                                <h3>11/2016 – 09/2018, 06/2020 – 09/2020</h3>
+                                <h2>Customer Service Assistant – Mole Country Stores, Dorchester - 11/2016 – 09/2018, 06/2020 – 09/2020</h2>
                             </div>
-                            <p>• Part time job, responsible for individual departments of the store as well as checkouts.</p>
-                            <p>• Returned during the COVID-19 pandemic to assist around the store.</p>
+                            <p>• Responsible for individual departments of the store as well as checkouts.</p>
+                            <p>• Returned to assist during the COVID-19 pandemic.</p>
                           </div>
                         </section>
                         <section v-if="information" class="star-wars">
                           <div class="crawl">
                             <div class="title">
-                                <h1>Additional Information</h1>
                                 <h2>Full clean UK driving licence</h2>
                                 <h2>Natively fluent in English and conversationally fluent in Spanish.</h2>
                             </div>
                             <div class="title">
-                                <h1>Hobbies</h1>
-                                <h2>Going to the gym.</h2>
-                                <h2>Football.</h2>
-                                <h2>Music – Bassist and Guitarist.</h2>
-                                <h2>Practicing Spanish.</h2>
+                                <h1>Hobbies include going to the gym, football, playing music and practicing Spanish. </h1>
                             </div>
                           </div>
                         </section>
@@ -160,8 +216,12 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Loader from "../Loader.vue";
+import { TransitionRoot } from "@headlessui/vue";
 
 const router = useRouter();
+let isShowing = ref(true);
+const frontPage = ref(true);
+
 let ready = ref(false);
 let defaultView = ref(true);
 let aboutSection = ref(false);
@@ -170,6 +230,48 @@ let oExperienceSection = ref(false);
 let educationSection = ref(false);
 let information = ref(false);
 
+function rollText(area, delayTime){
+  isShowing.value = false;
+  switch(area)
+  {
+    case 1:
+      delay(aboutSection, delayTime);
+      break;
+    case 2:
+      delay(experienceSection, delayTime);
+      break;
+    case 3:
+      delay(educationSection, delayTime);
+      break;
+    case 4:
+      delay(oExperienceSection, delayTime);
+      break;
+    case 5:
+      delay(information, delayTime);
+      break;
+    default:
+      break;
+
+  }
+  // console.log(section);
+  
+  
+}
+async function delay(section, delayTime) {
+  
+  await sleep(500);
+  section.value = true;
+
+  await sleep(delayTime);
+  section.value = false;
+  isShowing.value = true;
+
+}
+function sleep(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time || 1000);
+  });
+}
 </script>
 
 <style lang="scss" scoped>
@@ -202,14 +304,24 @@ let information = ref(false);
     overflow: visible;
 }
 
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+}
+
 .star-wars {
   display: flex;
   justify-content: center;
   position: relative;
   height: 800px;
-  font-size: 400%;
+
+  font-size: 500%;
   font-weight: 600;
- 
+  letter-spacing: 6px;
   line-height: 150%;
   perspective: 400px;
   text-align: justify;
@@ -219,7 +331,7 @@ let information = ref(false);
   position: relative;
   top: 99999px;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  animation: crawl 45s linear;
 }
 .crawl > .title {
   font-size: 120%;
@@ -227,7 +339,7 @@ let information = ref(false);
 }
 
 .crawl > .title h1 {
-  margin: 0 0 5%;
+
   margin-top: 5%;
 
   text-transform: uppercase;
