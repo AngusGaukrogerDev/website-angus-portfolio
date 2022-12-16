@@ -19,12 +19,33 @@
       </div>
     </div>
 
-    <div
-      class="flip-card-back w-screen h-screen bg-white dark:bg-black stack__grid__main"
-    >
-    <div  class=" w-screen h-screen center__all bg-white dark:bg-black ">
-      <!-- Content here -->
-      <div class="py-4">
+    <div class="flip-card-back w-screen h-screen about__layout bg-white dark:bg-black ">
+    
+      <div class="center__all"></div>
+      <div class="center__all"></div>
+      <div class="center__all">
+      </div>
+      <div class="center__all"></div>
+      <div class="center__all"></div>
+      <div class="center__all"></div>
+      <div class="center__all ">
+        <img class="floating mask mask-square border-4 image__scale" src="../../assets/IMG-20220824-WA0076.jpg" />
+      </div>
+      <div class="center__all"></div>
+      <div class="center__all floatingalt">
+        <div>
+          <h1>Angus Gaukroger</h1>
+        </div>
+        <div class="py-4">
+            <div
+              class="center__content return__button border-4 cursor-pointer hover__transition tooltip tooltip-bottom tooltip-primary"
+              data-tip="Return"
+              @click="router.push('/')"
+            >
+              <ion-icon size="large" name="return-up-back"> </ion-icon>
+            </div>
+        </div></div>
+      <!-- <div class="py-4">
           <div
             class="center__content return__button border-4 cursor-pointer hover__transition tooltip tooltip-bottom tooltip-primary"
             data-tip="Return"
@@ -32,8 +53,7 @@
           >
             <ion-icon size="large" name="return-up-back"> </ion-icon>
           </div>
-      </div>
-  </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -55,5 +75,35 @@ let ready = ref(false);
   justify-content: center;
   align-items: center;
   
+}
+.floatingalt {
+  animation-name: floatingalt;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floatingalt {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(15px, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+.image__scale{
+  height: 70vh;
+  width: auto;
+
+}
+.about__layout{
+  display: grid;
+  grid-template-columns: auto 45vw auto 45vw auto;
+  grid-template-rows: auto 70vh auto;
 }
 </style>
