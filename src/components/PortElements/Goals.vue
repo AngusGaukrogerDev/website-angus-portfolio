@@ -23,8 +23,8 @@
         class="flip-card-back w-screen h-screen bg-white dark:bg-black stack__grid__main"
       >
       <div  class=" w-screen h-screen center__all bg-white dark:bg-black ">
-        <h1 class="py-3">Some life goals: Sorted from short to long term.</h1>
-        <p class="italic  py-3">"Men who think in decades are dangerous"- Kris Sturmey</p>
+        <h1 class="py-3 text-2xl"><strong>Some life goals - Sorted from short to long term:</strong></h1>
+        <p class="italic  py-3 text-xl">"Men who think in decades are dangerous"- Kris Sturmey</p>
         <span class="py-0.5">- Continue to show love and gratitude to my family and close friends.</span>
         <span class="py-0.5">- To become a digial nomad, with the freedom to live anywhere.</span>
         <span class="py-0.5">- Become a Professional Full-Stack Web Developer.</span>

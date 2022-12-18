@@ -1,7 +1,7 @@
 <template>
   <Loader @complete="ready = true" />
   <div v-if="ready" id="FlipCard" class="flip-card bg-white dark:bg-black">
-  <div id="CardInner" class="flip-card-inner">
+  <div id="CardInner" class="flip-card-inner ">
     <div
       id="CardFront"
       class="flip-card-front w-screen bg-white dark:bg-black h-screen page__grid center__content"
@@ -34,7 +34,11 @@
       <div class="center__all"></div>
       <div class="center__all floatingalt">
         <div>
-          <h1>Angus Gaukroger</h1>
+          <h1 class="text-2xl"><strong>Angus Gaukroger</strong> </h1>
+          <p>Hola! Qué más pues? My name is Angus and I would like to welcome you to my website and personal portfolio.</p>
+          <p>I am a 22 year old Software Engineer from Dorchester, England. Currently, I work for a company called Loop Technology Ltd who are a robotics and manufacturing company based in Dorchester.
+                        My time working at Loop Technology has exposed me to many types of projects and technologies.</p>
+          <p> In my free time outside of work, I have been learning web technologies. I like working with Javascript predominantly, and in particular Vue.js, but can easily adapt to whatever stack is put infront of me. I have an interest in all parts of the stack, but i particularly enjoy creating frontend UI's.</p>
         </div>
         <div class="py-4">
             <div
@@ -78,7 +82,7 @@ let ready = ref(false);
 }
 .floatingalt {
   animation-name: floatingalt;
-  animation-duration: 4s;
+  animation-duration: 9s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   margin-left: 30px;
