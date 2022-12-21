@@ -1,6 +1,6 @@
 <template>
-    <Loader @complete="ready = true" />
-    <div v-if="ready" id="FlipCard" class="flip-card bg-white dark:bg-black">
+    
+    <div id="FlipCard" class="flip-card bg-white dark:bg-black">
     <div id="CardInner" class="flip-card-inner">
       <div
         id="CardFront"
@@ -24,11 +24,12 @@
       >
       <div  class=" w-screen h-screen center__all bg-white dark:bg-black ">
         <!-- Content here -->
+        <div class="text-2xl py-10">Coming soon!</div>
         <div class="py-4">
             <div
               class="center__content return__button border-4 cursor-pointer hover__transition tooltip tooltip-bottom tooltip-primary"
               data-tip="Return"
-              @click="router.push('/')"
+              @click="router.push('/Travel')"
             >
               <ion-icon size="large" name="return-up-back"> </ion-icon>
             </div>
@@ -42,23 +43,17 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import Loader from "../Loader.vue";
 
 const router = useRouter();
-let ready = ref(false);
+
 </script>
 
 <style lang="scss" scoped>
 .center__all{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.tri__column{
-  display: grid;
-  grid-template-columns: auto 70vw auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 </style>

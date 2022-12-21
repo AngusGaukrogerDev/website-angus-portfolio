@@ -20,16 +20,15 @@
       </div>
 
       <div class="flip-card-back w-screen h-screen bg-white dark:bg-black ">
-        <div  class=" w-screen h-screen bg-white dark:bg-black travel__layout">
-          
-        
-          
+        <div v-if="showMain"  class=" w-screen h-screen bg-white dark:bg-black travel__layout">
           <!-- Content here -->
           <div></div>
           <div></div>
           <div></div>
           <div></div>
-          <div></div>
+          <div>
+            <h1 class="text-2xl"><strong>My Adventures... So Far!</strong></h1>
+          </div>
           <div></div>
           <div></div>
           <div></div>
@@ -42,7 +41,7 @@
                 <h2 class="card-title ">Colombia</h2>
                 <p>Coffee, salsa, Carribean Coast, mountains.. This country has it all.</p>
                 <div class="card-actions justify-center hover:scale-105">
-                  <button class="btn btn-primary text-white">Read More</button>
+                  <button @click="router.push('/Travel/Colombia')" class="btn btn-primary text-white">Read More</button>
                 </div>
               </div>
             </div>
@@ -55,7 +54,7 @@
                 <h2 class="card-title">Perú</h2>
                 <p>Land of the Incas, incredible food and all types of diverse landscapes.</p>
                 <div class="card-actions justify-center hover:scale-105">
-                  <button class="btn btn-primary text-white">Read More</button>
+                  <button @click="router.push('/Travel/Peru')" class="btn btn-primary text-white">Read More</button>
                 </div>
               </div>
             </div>
@@ -68,7 +67,7 @@
                   <h2 class="card-title">Ecuador</h2>
                   <p>A small, but super diverse country that I wish I had more time in!</p>
                   <div class="card-actions justify-center hover:scale-105">
-                    <button class="btn btn-primary text-white">Read More</button>
+                    <button @click="router.push('/Travel/Ecuador')" class="btn btn-primary text-white">Read More</button>
                   </div>
                 </div>
               </div>
@@ -81,7 +80,7 @@
                   <h2 class="card-title">Spain</h2>
                   <p>Paella, Playa and Snowy peaks. My favourite country that I have visited in Europe so far!</p>
                   <div class="card-actions justify-center hover:scale-105">
-                    <button class="btn btn-primary text-white">Read More</button>
+                    <button @click="router.push('/Travel/Spain')" class="btn btn-primary text-white">Read More</button>
                   </div>
                 </div>
               </div>
@@ -105,6 +104,10 @@
         
         
         </div>
+        <!-- <Colombia v-if="colombiaInfo" />
+        <Ecuador v-if="ecuadorInfo"/>
+        <Peru v-if="peruInfo"/>
+        <Spain v-if="spainInfo"/> -->
       </div>
     </div>
   </div>
@@ -113,10 +116,30 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+
 import Loader from "../Loader.vue";
+import Colombia from './TravelDestinations/Colombia.vue';
+import Ecuador from './TravelDestinations/Ecuador.vue';
+import Peru from './TravelDestinations/Peru.vue';
+import Spain from './TravelDestinations/Spain.vue';
 
 const router = useRouter();
 let ready = ref(false);
+let showMain = ref(true);
+
+
+function showColombia()
+{
+  
+
+}
+
+function showMainPage()
+{
+  showMain.value = false;
+}
+
+
 </script>
 
 <style lang="scss" scoped>

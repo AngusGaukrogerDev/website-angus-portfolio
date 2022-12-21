@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+
 import Home from '/src/components/Home.vue';
 import About from '/src/components/PortElements/About.vue';
 
@@ -9,6 +10,11 @@ import Quotes from '/src/components/PortElements/Quotes.vue';
 import Projects from '/src/components/PortElements/Projects.vue';
 import Stack from '/src/components/PortElements/Stack.vue';
 import Travel from '/src/components/PortElements/Travel.vue';
+
+import Colombia from '/src/components/PortElements/TravelDestinations/Colombia.vue'
+import Ecuador from '/src/components/PortElements/TravelDestinations/Ecuador.vue'
+import Peru from '/src/components/PortElements/TravelDestinations/Peru.vue'
+import Spain from '/src/components/PortElements/TravelDestinations/Spain.vue'
 
 const routes = [
     {
@@ -55,6 +61,26 @@ const routes = [
         path: '/Travel',
         name: 'Travel',
         component: Travel,
+    },
+    {
+        path: '/Travel/Colombia',
+        name: 'Colombia',
+        component: Colombia,
+    },
+    {
+        path: '/Travel/Ecuador',
+        name: 'Ecuador',
+        component: Ecuador,
+    },
+    {
+        path: '/Travel/Peru',
+        name: 'Peru',
+        component: Peru,
+    },
+    {
+        path: '/Travel/Spain',
+        name: 'Spain',
+        component: Spain,
     },
     
 ];
