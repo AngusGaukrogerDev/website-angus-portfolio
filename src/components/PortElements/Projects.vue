@@ -23,16 +23,51 @@
         class="flip-card-back w-screen h-screen bg-white dark:bg-black stack__grid__main"
       >
       <div  class=" w-screen h-screen center__all bg-white dark:bg-black ">
-        <!-- Content here -->
-        <div class="py-4">
-            <div
-              class="center__content return__button border-4 cursor-pointer hover__transition tooltip tooltip-bottom tooltip-primary"
-              data-tip="Return"
-              @click="router.push('/')"
-            >
-              <ion-icon size="large" name="return-up-back"> </ion-icon>
+        <div class="quad__column  items-center">
+            <!-- Row 1 -->
+            <div></div>
+            <div>Name</div>
+            <div></div>
+            <div>Description</div>
+            <div></div>
+            <div>Stack</div>
+            <div></div>
+            <div>Links</div>
+            <div></div>
+            <!-- Row 2 -->
+            <div></div>
+            <div>
+              World Cup Sweepstakes Allocator
             </div>
+            <div></div>
+            <div>
+              A full-stack CRUD application for alloacting random teams to participants in a World Cup sweepstakes.
+            </div>
+            <div></div>
+            <div >
+              Vue.js, Tailwind CSS, Node.js, Express.js, SQLite3
+            </div>
+            <div></div>
+            <div>
+              <a class="btn btn-primary" href="https://github.com/AngusGaukrogerDev/WorldCupSweepstakes">Github Repo (Front End)  <ion-icon name="logo-github" ></ion-icon> </a>
+            
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="py-4 justify-center flex d-flex">
+              <div
+                class="center__content return__button border-4 w-1 cursor-pointer hover__transition tooltip tooltip-bottom tooltip-primary"
+                data-tip="Return"
+                @click="router.push('/')"
+              >
+                <ion-icon size="large" name="return-up-back"> </ion-icon>
+              </div>
+          </div>
         </div>
+        
     </div>
       </div>
     </div>
@@ -57,8 +92,9 @@ let ready = ref(false);
   
 }
 
-.tri__column{
+.quad__column{
   display: grid;
-  grid-template-columns: auto 70vw auto;
+  grid-row-gap: 1vw;
+  grid-template-columns: auto 20vw auto 20vw auto 20vw auto 20vw auto;
 }
 </style>
