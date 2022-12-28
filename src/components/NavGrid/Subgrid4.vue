@@ -12,7 +12,7 @@
       href="https://twitter.com/angus_gaukroger"
       class="center__children border-4 hover__transition tooltip tooltip-top tooltip-primary"
       data-tip="Twitter"
-      @click="emit('redirect')"
+      
     >
       <ion-icon name="logo-twitter" size="large"></ion-icon>
     </a>
@@ -24,20 +24,27 @@
     >
       <ion-icon name="logo-linkedin" size="large"></ion-icon>
     </a>
-    <div
+    <a
       class="center__children border-4 hover__transition tooltip tooltip-bottom tooltip-primary"
       data-tip="Contact"
+      @click="emit('contactView');"
     >
       <ion-icon name="mail" size="large"></ion-icon>
-    </div>
+    </a>
   </div>
 </template>
 
 <script setup>
+import {ref} from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-const emit = defineEmits(["redirect"]);
+const emit = defineEmits(["contactView", ]);
 
+// let contactClick = ref(false);
+
+// function switchContactView() {
+//   emit('contactView', );
+// }
 // function exitSequence() {
 //     emit('redirect');
 // }

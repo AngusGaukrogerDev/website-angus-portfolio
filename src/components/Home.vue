@@ -37,8 +37,8 @@
       >
         <SubGrid1 />
         <Subgrid2 @dark-changed="darkSwitcher" />
-        <Subgrid4 @redirect="redirect = true" />
-        <Subgrid3 />
+        <Subgrid4 @contact-view="contactViewSwitch()" />
+        <Subgrid3 v-bind:Check="contactSwitcher" />
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@ import { useDark, useToggle } from "@vueuse/core";
 let colorScheme = ref("linear-gradient(to left, white 50%, black 50%) right");
 let hoverColor = ref("white");
 let ready = ref(false);
-let redirect = ref(false);
+let contactSwitcher = ref(false);
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
@@ -75,6 +75,21 @@ function darkSwitcher() {
     console.log(isDark);
   }
 }
+
+function contactViewSwitch(){
+  console.log(contactSwitcher.value)
+  if(contactSwitcher.value == false)
+  {
+    contactSwitcher.value = true;
+    console.log(contactSwitcher.value)
+  }
+  else
+  {
+    contactSwitcher.value = false;
+    console.log(contactSwitcher)
+  }
+}
+
 onMounted(() => {
   if (isDark.value) {
     colorScheme.value = "linear-gradient(to left, black 50%, white 50%) right";

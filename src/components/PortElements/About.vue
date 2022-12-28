@@ -38,7 +38,7 @@
           <p>Hola! Qué más pues? My name is Angus and I would like to welcome you to my website and personal portfolio.</p>
           <p>I am a 22 year old Software Engineer from Dorchester, England. Currently, I work for a company called Loop Technology Ltd who are a robotics and manufacturing company based in Dorchester.
                         My time working at Loop Technology has exposed me to many types of projects and technologies.</p>
-          <p> In my free time outside of work, I have been learning web technologies. I like working with Javascript predominantly, and in particular Vue.js, but can easily adapt to whatever stack is put infront of me. I have an interest in all parts of the stack, but i particularly enjoy creating frontend UI's.</p>
+          <p> In my free time outside of work, I have been learning web technologies. I like working with Javascript predominantly, and in particular Vue.js, but can easily adapt to whatever stack is put infront of me. I have an interest in all parts of the stack, but I particularly enjoy creating frontend UI's.</p>
         </div>
         <div class="py-4">
             <div

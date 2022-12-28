@@ -28,9 +28,9 @@
         <div>
           <div>
             <h1 class="py-3 text-2xl"><strong>Some of my favourite quotes:</strong></h1>
-            <p class="italic px-8 py-3 text-xl">"Try to consider as transitory all adverser circumstances and distrubances. Like ripples in a pool, they occur and soon disappear"-The Dalai Llama, The Little Book of Buddhism</p>
-            <p class="italic px-8 py-3 text-xl">"Don't be ashamed to need help. Like a soldier storming a wall, you have a mission to accomplish. And if you've been wounded and you need a comrade to pull you up? So what?"- Marcus Aurelius, Meditations</p>
-            <p class="italic px-8 py-3 text-xl">"Everywhere each moment you have the option to accept this event with humility to treat this person, as he should be treated to approach this thought with care. So that nothing irrational creeps in"- Marcus Aurelius, Meditations</p>
+            <p class="italic px-8 py-3 text-xl">"Try to consider as transitory all adverse circumstances and distrubances. Like ripples in a pool, they occur and soon disappear"-The Dalai Llama, The Little Book of Buddhism</p>
+            <p class="italic px-8 py-3 text-xl">"Don't be ashamed to need help. Like a soldier storming a wall, you have a mission to accomplish. And if you've been wounded and you need a comrade to pull you up, so what?"- Marcus Aurelius, Meditations</p>
+            <p class="italic px-8 py-3 text-xl">"Everywhere each moment you have the option to accept this event with humility, to treat this person as he should be treated, to approach this thought with care. So that nothing irrational creeps in"- Marcus Aurelius, Meditations</p>
             <p class="italic  py-3 text-xl">"I learned thirty years ago that it is foolish to scold. I have enough trouble overcoming my own limitations without fretting over the fact that God has not seen fit to distribute evenly the gift of intelligence."- John Wanamaker</p>
             <p class="italic  py-3 text-xl">"In the quest for mental quiescence, there is a state where striving must be abandoned, for an effortless concentration is necessary. Your mind then becomes very tranquil and achieves a state of wholeness. At that moment, to make an effort would disturb that pure tranquility. So in order to maintain that tranquility, effortless effort must be used."- Dale Carnegie, How to win friends and influence people</p>
           </div>
