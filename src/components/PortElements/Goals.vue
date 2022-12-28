@@ -28,13 +28,13 @@
         <span class="py-0.5">- Continue to show love and gratitude to my family and close friends.</span>
         <span class="py-0.5">- To become a digial nomad, with the freedom to live anywhere.</span>
         <span class="py-0.5">- Become a Professional Full-Stack Web Developer.</span>
-        <span class="py-0.5">- 100kg Barbell Bench Press (for 5 reps).</span>
+        <span class="py-0.5">- 100kg Barbell Bench Press (for a rep).</span>
         <span class="py-0.5">- Complete 1000 days without alcohol. (Currently on day {{TotalDays}}).</span>
         <span class="py-0.5">- To start my own business, and make a salary from it.</span>
         <span class="py-0.5">- To question and challenge my mindset and beliefs, in a way that is healthy for personal growth.</span>
         <span class="py-0.5">- To visit and explore in depth, every country in Latin America.</span>
         <span class="py-0.5">- To become fluent in Arabic.</span>
-        <span class="py-0.5">- To become a good father. </span>
+        <!-- <span class="py-0.5">- To become a good father. </span> -->
         <div class="py-4">
             <div
               class="center__content return__button border-4 cursor-pointer hover__transition tooltip tooltip-bottom tooltip-primary"
