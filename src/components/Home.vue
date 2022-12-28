@@ -77,16 +77,13 @@ function darkSwitcher() {
 }
 
 function contactViewSwitch(){
-  console.log(contactSwitcher.value)
   if(contactSwitcher.value == false)
   {
     contactSwitcher.value = true;
-    console.log(contactSwitcher.value)
   }
   else
   {
     contactSwitcher.value = false;
-    console.log(contactSwitcher)
   }
 }
 
