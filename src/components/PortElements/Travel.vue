@@ -49,7 +49,7 @@
           <div></div>
           <div class="hover:scale-105">
             <div class="card card-compact  dark:bg-white dark:text-black w-60 border-4 shadow-xl">
-            <figure><img src="../../assets/cajamarca.jpg" alt="cajamarca" /></figure>
+            <figure><img src="../../assets/Cajamarca.jpg" alt="cajamarca" /></figure>
               <div class="card-body center__all">
                 <h2 class="card-title">Perú</h2>
                 <p>Land of the Incas, incredible food and all types of diverse landscapes.</p>
@@ -75,7 +75,7 @@
           <div></div>
           <div class="hover:scale-105">
             <div class="card card-compact  dark:bg-white dark:text-black w-60 border-4 shadow-xl">
-              <figure><img class="scale__images" src="../../assets/barcelona.jpg" alt="barcelona" /></figure>
+              <figure><img class="scale__images" src="../../assets/Barcelona.jpg" alt="barcelona" /></figure>
                 <div class="card-body center__all">
                   <h2 class="card-title">Spain</h2>
                   <p>Paella, Playa and Snowy peaks. My favourite country that I have visited in Europe so far!</p>
